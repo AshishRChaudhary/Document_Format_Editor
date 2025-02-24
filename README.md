@@ -118,6 +118,20 @@ DELETE /converter/history/<id>/
 PATCH /converter/history/<id>/
 ```
 
+## [Utils Module](./converter/utils.py)
+
+The utils.py module is responsible for handling the core file conversion logic. It includes the `convert_file` function, which processes different file formats and converts them as required. The module utilizes various libraries such as:
+
+- [`pdf2docx`](https://pypi.org/project/pdf2docx/) – Converts PDF files to DOCX format.
+- [`python-docx`](https://pypi.org/project/python-docx/) – Handles DOCX file creation and manipulation.
+- [`reportlab`](https://pypi.org/project/reportlab/) – Generates PDF files from text-based formats.
+- [`Pillow (PIL)`](https://pypi.org/project/Pillow/) – Converts image files (e.g., PNG) to PDF.
+- [`openpyxl`](https://pypi.org/project/openpyxl/) – Reads and processes XLSX files.
+- [`csv`](https://docs.python.org/3/library/csv.html) – Handles CSV file reading and writing.
+
+The `convert_file` function ensures smooth and efficient format transformations while maintaining data integrity.
+
+
 ## Challenges & Solutions
 
 ### Challenge: **File Access Issues on Windows**
@@ -140,7 +154,7 @@ PATCH /converter/history/<id>/
 - Use **Postman** to send a request and receive the converted file.
 - **Swagger UI** or other API testing tools do not support direct file downloads.
 
-## Example Walkthrough
+## Example Walkthrough of Postman
 
 **Convert a DOCX file to PDF using Postman:**
 
