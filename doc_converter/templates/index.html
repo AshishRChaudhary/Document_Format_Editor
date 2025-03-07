@@ -1,0 +1,49 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Converter</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1 class="logo">PDF Converter</h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Hero Section -->
+    <header class="hero">
+        <h2>Convert Your Files to PDF Instantly</h2>
+        <p>Fast, secure, and easy-to-use online tool</p>
+    </header>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <div class="card">
+            <h2>Upload and Convert</h2>
+            <label class="upload-box" id="uploadBox">
+                <span>Drag & drop or click to upload</span>
+                <input type="file" id="fileInput" accept=".pdf,.docx,.jpg" hidden>
+            </label>
+            <p id="fileName"></p>
+            <button id="convertBtn" disabled>Convert to PDF</button>
+            <div id="loader" class="hidden">Converting...</div>
+            <a id="downloadLink" class="hidden" href="#">Download PDF</a>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 PDF Converter. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>

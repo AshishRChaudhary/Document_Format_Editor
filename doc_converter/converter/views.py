@@ -1,11 +1,15 @@
 from rest_framework import generics, permissions
 from django.http import FileResponse
 from django.utils.timezone import now
+from django.shortcuts import render
 from .models import ConversionRecord
 from .serializers import ConversionRecordSerializer
 import os
 from django.conf import settings
 from .utils import convert_file
+
+def home(request):
+    return render(request,'index.html')
 
 class ConversionListCreateView(generics.ListCreateAPIView):
     serializer_class = ConversionRecordSerializer
