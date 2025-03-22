@@ -21,8 +21,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("users/", include("users.urls")),
-    path("", include("converter.urls")),
+     path("users/", include("users.urls")),
+     path("converter/", include("converter.urls")),
 ]
 
 # Serve media files in development
