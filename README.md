@@ -5,7 +5,6 @@
 The **Document Format Converter API** is a backend service built with Django and Django REST Framework (DRF) that allows authenticated users to upload files, convert them into different formats, and download the converted files. It supports multiple file types and ensures that only conversion metadata is stored in the database.
 
 ## Supported File Conversions
-
 - **PDF → DOCX**
 - **DOCX → PDF**
 - **TXT → PDF**
